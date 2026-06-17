@@ -94,6 +94,7 @@ function go(p){
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.ni').forEach(x=>x.classList.toggle('on',x.dataset.p===p));
   document.getElementById('page-'+p).classList.add('active');
+  window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;
   document.querySelector('.main').scrollTo(0,0);
   location.hash=p;
   if(p==='dashboard')setTimeout(doCount,120);
@@ -1900,12 +1901,12 @@ function openCS(id){
   document.querySelectorAll('.ni').forEach(x=>x.classList.remove('on'));
   const _m=document.querySelector('.main');
   _m.style.overflowY='hidden';
-  _m.scrollTop=0;
+  _m.scrollTop=0;window.scrollTo(0,0);
   document.getElementById('page-casestudy').classList.add('active');
-  _m.scrollTop=0;
+  _m.scrollTop=0;window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;
   // Step 2: restore overflow after two frames (layout settled), keep intent-lock as backup
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
-    _m.scrollTop=0;
+    _m.scrollTop=0;window.scrollTo(0,0);document.documentElement.scrollTop=0;
     _m.style.overflowY='';
     let _locked=true;
     const _unlock=()=>{
