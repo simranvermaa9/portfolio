@@ -1285,3 +1285,43 @@ button{font-family:var(--f);cursor:pointer;border:none;background:none;}
   .cnx-hero{grid-template-columns:1fr;}
   .cnx-caps{grid-template-columns:repeat(2,1fr);}
 }
+
+/* ════════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES (career map · work filter · case studies)
+   ════════════════════════════════════════════ */
+@media(max-width:760px){
+  /* ---- Career timeline (Gantt): keep design, scroll horizontally ---- */
+  .gantt-outer{overflow-x:auto;padding:18px 16px 4px;-webkit-overflow-scrolling:touch;}
+  .gantt-years,.gantt-track,.gantt-role-labels{min-width:700px;}
+  .gantt-outer::-webkit-scrollbar{height:0;}
+
+  /* ---- Work page filter tabs: scroll instead of clipping ---- */
+  .filter-row{width:auto;max-width:100%;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;}
+  .filter-row::-webkit-scrollbar{height:0;}
+  .ftab{white-space:nowrap;flex-shrink:0;}
+
+  /* ════ CASE STUDIES ════ */
+  /* hero: stack text over the screen collage */
+  .spcs-hero{grid-template-columns:1fr;height:auto;}
+  .spcs-hero-l{padding:30px 22px 28px;}
+  .spcs-hero-r{grid-template-rows:none;grid-auto-rows:116px;}
+  /* KPI row: 2-up, drop dividers */
+  .spcs-kpis{flex-wrap:wrap;gap:18px 0;padding:18px 0;}
+  .spcs-kpi{flex:0 0 50%;border-right:none;margin-right:0;padding-right:10px;}
+  /* collapse every side-by-side grid */
+  .spcs-brief,.spcs-research,.spcs-eco-grid,.spcs-findings-grid,
+  .spcs-before-layout,.spcs-decision,.spcs-callouts,.spcs-outcome-layout{grid-template-columns:1fr;}
+  .spcs-more-grid{grid-template-columns:repeat(2,1fr);}
+  /* tighten side padding only on sections that set it inline (leaves full-bleed sections alone) */
+  .spcs-in[style*="padding"]{padding-left:22px !important;padding-right:22px !important;}
+  .spcs-h{font-size:21px;}
+  .spcs-p{font-size:13.5px;}
+  /* collapse every inline-styled grid (briefs, decisions, etc.) to one column */
+  .spcs [style*="display:grid"]{grid-template-columns:1fr !important;}
+  .spcs [style*="display:grid"]{gap:24px !important;}
+  /* …then bring image groups back to a 2-up grid */
+  .spcs [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr) !important;}
+  .spcs [style*="display:flex;gap:12px"]{flex-wrap:wrap !important;}
+  .spcs [style*="display:flex;gap:12px"] img{flex:0 0 calc(50% - 6px) !important;}
+  .spcs-table{font-size:11px;}
+}
