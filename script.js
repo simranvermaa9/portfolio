@@ -312,7 +312,7 @@ function openCS(id){
         <p style="font-size:13.5px;color:#fff;line-height:1.65;margin:0;">Shelfpay was the missing <strong>group-wallet</strong> layer &mdash; groups pre-fund a shared balance and payments auto-settle in real time. No follow-ups. No reminders.</p>
       </div>
     </div>
-    <div>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
       <table class="spcs-table" style="margin-top:0;">
         <thead><tr><th></th><th>Group Wallet</th><th>Real-time</th><th>UPI</th><th>Flex Split</th><th>Log Only</th></tr></thead>
         <tbody>

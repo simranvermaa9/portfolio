@@ -1311,7 +1311,7 @@ button{font-family:var(--f);cursor:pointer;border:none;background:none;}
   /* collapse every side-by-side grid */
   .spcs-brief,.spcs-research,.spcs-eco-grid,.spcs-findings-grid,
   .spcs-before-layout,.spcs-decision,.spcs-callouts,.spcs-outcome-layout{grid-template-columns:1fr;}
-  .spcs-more-grid{grid-template-columns:repeat(2,1fr);}
+  .spcs-more-grid{grid-template-columns:1fr;}
   /* tighten side padding only on sections that set it inline (leaves full-bleed sections alone) */
   .spcs-in[style*="padding"]{padding-left:22px !important;padding-right:22px !important;}
   .spcs-h{font-size:21px;}
@@ -1324,4 +1324,13 @@ button{font-family:var(--f);cursor:pointer;border:none;background:none;}
   .spcs [style*="display:flex;gap:12px"]{flex-wrap:wrap !important;}
   .spcs [style*="display:flex;gap:12px"] img{flex:0 0 calc(50% - 6px) !important;}
   .spcs-table{font-size:11px;}
+  /* let grid/flex children shrink so headings & text wrap to the screen instead of being clipped */
+  .spcs [style*="display:grid"]>*,
+  .spcs [style*="display:flex"]>*{min-width:0;}
+  .spcs-table{width:100% !important;min-width:430px;}
+  /* process-flow rows (the "money loop", the userflow): stack vertically, turn arrows to point down */
+  .spcs [style*="align-items:stretch;gap:0"]{flex-direction:column;gap:8px;}
+  .spcs [style*="align-items:stretch;gap:0"]>div[style*="flex-shrink:0"]{
+    width:100% !important;height:24px;padding:0 !important;
+    align-items:center !important;transform:rotate(90deg);}
 }
