@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simran Verma — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,200;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sb-brand">
+    <div class="sb-mono">SV</div>
+    <div class="sb-name">Simran Verma</div>
+    <div class="sb-role">Product Designer II</div>
+  </div>
+  <nav class="sb-nav">
+    <div class="nsec">Pages</div>
+    <div class="ni on" data-p="dashboard" onclick="go('dashboard')"><span class="ni-ic">⊞</span><span>Dashboard</span></div>
+    <div class="ni" data-p="work" onclick="go('work')"><span class="ni-ic">◈</span><span>Work</span><span class="ni-badge">5</span></div>
+    <div class="ni" data-p="about" onclick="go('about')"><span class="ni-ic">○</span><span>About</span></div>
+    <div class="ni" data-p="connect" onclick="go('connect')"><span class="ni-ic">↗</span><span>Connect</span></div>
+  </nav>
+  <div class="sb-foot">
+    <div class="sb-avail"><span class="dot-g"></span><span>Available</span></div>
+    <div class="sb-clock" id="sbC">--:--</div>
+    <div class="sb-date" id="sbD">IST</div>
+    <div class="sb-soc">
+      <a href="https://linkedin.com/in/simranverma9" target="_blank">in</a>
+      <a href="https://behance.net/simranvermaa" target="_blank">be</a>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- ─── DASHBOARD ─── -->
+  <section class="page active" id="page-dashboard">
+
+    <div class="header-row" style="margin-bottom:10px;">
+      <div class="card welcome">
+        <div class="w-eye"><span class="dot-g"></span>Actively looking · Bengaluru, India</div>
+        <h1 class="w-name">Simran Verma.</h1>
+        <p class="w-tag">Over the past four years, I've shipped <strong>12+ products</strong> to production — AI analytics tools used by <strong>50K+ people</strong> on factory floors, a design system built from scratch at Quartic.ai, and a fintech product I took from <strong>zero to 5,000 users</strong> as the founding designer at a <strong>YC startup</strong>.<br><br>The problems I find most interesting are the ones where the domain is technical, the users didn't sign up for it, and good design isn't obvious until it's done.<br><br>This portfolio is the work, the thinking, and how it got made.</p>
+        <div class="w-act">
+          <button class="btn-s" onclick="go('connect')">Get in Touch</button>
+          <a href="assets/Simran_Verma_Resume.pdf" target="_blank" class="btn-l">Resume ↗</a>
+        </div>
+      </div>
+      <div class="card glance">
+        <div class="clbl" style="margin-bottom:10px;">At a Glance</div>
+        <div class="gl-row"><span class="gl-k">Status</span><span class="gl-avail"><span class="dot-g"></span>Available</span></div>
+        <div class="gl-row"><span class="gl-k">Current</span><span class="gl-v">Product Designer II<br><span style="color:var(--ink2);font-weight:400;">Quartic.ai</span></span></div>
+        <div class="gl-row"><span class="gl-k">Promoted</span><span class="gl-v m">PD I → II · Apr 2025</span></div>
+        <div class="gl-row"><span class="gl-k">Domains</span><span class="gl-v m">Enterprise AI<br>Fintech · Health-tech</span></div>
+        <div class="gl-row"><span class="gl-k">Seeking</span><span class="gl-v m">Senior IC · Founding</span></div>
+        <div class="gl-row"><span class="gl-k">Location</span><span class="gl-v m">Bengaluru · IST</span></div>
+      </div>
+    </div>
+
+    <div class="metrics-row gap">
+      <div class="mc" style="border-top:2px solid #2563EB;"><div class="mc-cap">Experience</div><div class="mc-val" data-count="4" data-suffix="+">0</div><div class="mc-lbl">Years in design across enterprise AI, fintech &amp; health-tech.</div></div>
+      <div class="mc" style="border-top:2px solid #4F7E83;"><div class="mc-cap">Output</div><div class="mc-val" data-count="12" data-suffix="+">0</div><div class="mc-lbl">Products shipped in production across four domains.</div></div>
+      <div class="mc" style="border-top:2px solid #059669;"><div class="mc-cap">Impact</div><div class="mc-val">$2.76B</div><div class="mc-lbl">Annual cost of bad provider data in US healthcare. Designed the products built to fix it.</div></div>
+      <div class="mc" style="border-top:2px solid #D97706;"><div class="mc-cap">Reach</div><div class="mc-val" data-count="50" data-suffix="K+">0</div><div class="mc-lbl">Users at Quartic across Fortune 500 manufacturers.</div></div>
+      <div class="mc" style="border-top:2px solid #E11D48;"><div class="mc-cap">Retention</div><div class="mc-val" data-count="80" data-suffix="%">0</div><div class="mc-lbl">Day-1 retention at Shelfpay, scaling from zero.</div></div>
+    </div>
+
+    <div class="dsh-sec">
+      <div>
+        <div class="dsh-sec-eye">Journey</div>
+        <h2 class="dsh-sec-h">Career so far.</h2>
+        <p class="dsh-sec-sub">Intern to Product Designer II in four years, across four companies.</p>
+      </div>
+    </div>
+    <div class="career-wrap gap">
+      <div class="gantt-outer">
+        <div class="gantt-years" id="ganttYears"></div>
+        <div class="gantt-track" id="ganttTrack"><div class="gantt-axis"></div></div>
+        <div class="gantt-role-labels" id="ganttLabels"></div>
+      </div>
+      <div class="career-detail" id="careerDetail"><div class="cd-inner" id="cdInner"></div></div>
+    </div>
+
+    <div class="dsh-sec">
+      <div>
+        <div class="dsh-sec-eye">Work</div>
+        <h2 class="dsh-sec-h">Selected case studies.</h2>
+        <p class="dsh-sec-sub">Five products across four domains — shipped, in production.</p>
+      </div>
+      <button class="dsh-sec-action" onclick="go('work')">View all →</button>
+    </div>
+    <div class="cs-grid gap">
+      <div class="cs-card" onclick="openCS('quartic')">
+        <div class="cs-thumb"><img src="assets/thumb_quartic.webp" alt="Quartic.ai" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div class="cs-info">
+          <div class="cs-dom"><span class="cs-pip" style="background:#2563EB;"></span>Enterprise AI</div>
+          <div class="cs-co">Quartic.ai</div><div class="cs-rl">Product Designer II · May 2024 – Present</div>
+          <div class="cs-out"><strong>50K+ users</strong> across Fortune 500 manufacturers — AI analytics for plant operators who've never used an AI tool.</div>
+          <div class="cs-foot"><div class="cs-tags"><span class="cs-tag">Design Systems</span><span class="cs-tag">ML Interfaces</span></div><button class="cs-lnk">View case study →</button></div>
+        </div>
+      </div>
+      <div class="cs-card" onclick="openCS('shelfpay')">
+        <div class="cs-thumb"><img src="assets/thumb_shelfpay.webp" alt="Shelfpay" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div class="cs-info">
+          <div class="cs-dom"><span class="cs-pip" style="background:#4F7E83;"></span>Fintech · YC S22</div>
+          <div class="cs-co">Shelfpay</div><div class="cs-rl">Founding Designer · Dec 2022 – Jun 2023</div>
+          <div class="cs-out">Product, design system, and brand from scratch. <strong>80% day-1 retention</strong>, 0 to 5K users in six months.</div>
+          <div class="cs-foot"><div class="cs-tags"><span class="cs-tag">0→1</span><span class="cs-tag">Brand</span></div><button class="cs-lnk">View case study →</button></div>
+        </div>
+      </div>
+      <div class="cs-card" onclick="openCS('hilabs')">
+        <div class="cs-thumb"><img src="assets/thumb_hilabs.webp" alt="HiLabs" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div class="cs-info">
+          <div class="cs-dom"><span class="cs-pip" style="background:#059669;"></span>Health-tech</div>
+          <div class="cs-co">HiLabs</div><div class="cs-rl">Product Designer I · Jun 2023 – Apr 2024</div>
+          <div class="cs-out"><strong>10K+ healthcare providers</strong> in the US. 30+ user interviews. WCAG 2.1 AA throughout.</div>
+          <div class="cs-foot"><div class="cs-tags"><span class="cs-tag">User Research</span><span class="cs-tag">Accessibility</span></div><button class="cs-lnk">View case study →</button></div>
+        </div>
+      </div>
+      <div class="cs-card" onclick="openCS('redrop')">
+        <div class="cs-thumb"><img src="assets/thumb_redrop.webp" alt="Redrop" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div class="cs-info">
+          <div class="cs-dom"><span class="cs-pip" style="background:#D97706;"></span>Health-tech · Personal Project</div>
+          <div class="cs-co">Redrop</div><div class="cs-rl">Product Design · 2023</div>
+          <div class="cs-out">Healthcare app — simplifying a complex clinical domain for first-time users with no prior context.</div>
+          <div class="cs-foot"><div class="cs-tags"><span class="cs-tag">App Design</span><span class="cs-tag">Info Architecture</span></div><button class="cs-lnk">View case study →</button></div>
+        </div>
+      </div>
+      <div class="cs-card" onclick="openCS('venton')">
+        <div class="cs-thumb"><img src="assets/thumb_venton.webp" alt="Vent-On" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div class="cs-info">
+          <div class="cs-dom"><span class="cs-pip" style="background:#FFCD29;"></span>Mental Health · Personal Project</div>
+          <div class="cs-co">Vent-On</div><div class="cs-rl">Product Designer · 2023</div>
+          <div class="cs-out">Gen-Z mental health companion. Personality as a design strategy — tone became the differentiator.</div>
+          <div class="cs-foot"><div class="cs-tags"><span class="cs-tag">Neobrutalism</span><span class="cs-tag">App Design</span></div><button class="cs-lnk">View case study →</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dsh-sec">
+      <div>
+        <div class="dsh-sec-eye">Process</div>
+        <h2 class="dsh-sec-h">How I actually work.</h2>
+        <p class="dsh-sec-sub">Five habits that show up in every project.</p>
+      </div>
+    </div>
+    <div class="card gap" style="overflow:hidden;">
+      <div class="steps-outer">
+        <div class="steps-flow">
+
+          <div class="step">
+            <div class="step-ic" style="background:rgba(37,99,235,.12);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="1.5" width="12" height="15" rx="2" stroke="#2563EB" stroke-width="1.5"/><path d="M6 5.5h6M6 8.5h6M6 11.5h4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="step-num" style="color:#2563EB;">01</div>
+            <div class="step-title">Question the brief</div>
+            <div class="step-desc">Problems come pre-loaded with context and assumptions. My first job is to find out if the framing is right before anything else moves.</div>
+            <div class="step-eg">"The ask was a new dashboard view. A week of interviews later — nobody wanted a new view, they wanted it to load faster."</div>
+          </div>
+
+          <div class="step">
+            <div class="step-ic" style="background:rgba(5,150,105,.12);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="7" cy="5.5" r="2.5" stroke="#059669" stroke-width="1.5"/><path d="M2 15c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><circle cx="13.5" cy="5.5" r="1.75" stroke="#059669" stroke-width="1.5"/><path d="M15.5 13c.9.6 1.5 1.65 1.5 2.8" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="step-num" style="color:#059669;">02</div>
+            <div class="step-title">Talk to the actual users</div>
+            <div class="step-desc">Not stakeholders. Not proxies. The people sitting with the interface for 8 hours a day. 30+ interviews with healthcare providers and factory floor operators.</div>
+            <div class="step-eg">"We assumed they wanted more data. Every interview said: less data, but make it obvious when something's wrong."</div>
+          </div>
+
+          <div class="step">
+            <div class="step-ic" style="background:rgba(124,58,237,.12);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="3" cy="3" r="1.5" fill="#7C3AED"/><circle cx="9" cy="3" r="1.5" fill="#7C3AED"/><circle cx="15" cy="3" r="1.5" fill="#7C3AED"/><circle cx="3" cy="9" r="1.5" fill="#7C3AED"/><circle cx="9" cy="9" r="1.5" fill="#7C3AED"/><circle cx="15" cy="9" r="1.5" fill="#7C3AED"/><circle cx="3" cy="15" r="1.5" fill="#7C3AED"/><circle cx="9" cy="15" r="1.5" fill="#7C3AED"/><path d="M3 4.5v3M9 4.5v3M15 4.5v3M4.5 3h3M4.5 9h3M10.5 9h3M4.5 15h3" stroke="#7C3AED" stroke-width="1" stroke-linecap="round" opacity=".5"/></svg>
+            </div>
+            <div class="step-num" style="color:#7C3AED;">03</div>
+            <div class="step-title">Map the system first</div>
+            <div class="step-desc">Every user type, every edge case, every place this product touches another. The thinking before the first wireframe is what makes everything after faster.</div>
+            <div class="step-eg">"At Shelfpay, mapping every group payment scenario surfaced the core UX problem before a single screen existed."</div>
+          </div>
+
+          <div class="step">
+            <div class="step-ic" style="background:rgba(217,119,6,.12);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.5 2L4 10h5.5L7.5 16l6.5-8H8.5L10.5 2z" fill="#D97706"/></svg>
+            </div>
+            <div class="step-num" style="color:#D97706;">04</div>
+            <div class="step-title">Prototype and test fast</div>
+            <div class="step-desc">Don't wait for perfect. A rough prototype in front of a real user is worth more than a polished deck in front of stakeholders.</div>
+            <div class="step-eg">"15+ prototypes at Shelfpay. The one that became the product was number 11. Killing 10 first is how you know 11 is right."</div>
+          </div>
+
+          <div class="step">
+            <div class="step-ic" style="background:rgba(5,150,105,.12);">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#059669" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-5" stroke="#059669" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="step-num" style="color:#059669;">05</div>
+            <div class="step-title">Stay until it ships right</div>
+            <div class="step-desc">Handoff is not the finish line. I stay through implementation, in engineering reviews, speaking the language of shipping.</div>
+            <div class="step-eg">"Handoff time at Quartic dropped 40% because I was in Slack with the dev team until the component library was stable."</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="dsh-sec">
+      <div>
+        <div class="dsh-sec-eye">Life</div>
+        <h2 class="dsh-sec-h">Beyond the screen.</h2>
+        <p class="dsh-sec-sub">The making, the travelling, and the two cats.</p>
+      </div>
+    </div>
+    <div class="card gap" style="padding:16px;overflow:hidden;">
+      <div class="photos-outer" id="photoStrip">
+        <div class="photos-strip">
+          <!-- Set 1 -->
+          <div class="photo-item"><img src="https://framerusercontent.com/images/rZXTioeMPK8pFHGJ3fXFaKEk.jpg" alt="" loading="lazy"><div class="photo-label">Shelfpay · Bengaluru, 2023</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/TPCWe9rofsz2zviU96SUztBw.jpg" alt="" loading="lazy"><div class="photo-label">YC S22 · Demo prep</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/oxKkKLpxzpl07ixkw7K0XCMlmhA.jpg" alt="" loading="lazy"><div class="photo-label">Working session</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/C2ArciMm11yO3q5ZjQE8PZkwpQ.jpg" alt="" loading="lazy"><div class="photo-label">Team · Shelfpay</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/en65fe0tjycusTgIr8dpJeW65LY.jpg" alt="" loading="lazy"><div class="photo-label">Quartic.ai · 2024</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/4RFzdc1E2fCDQMrue3lb3SpDEk.jpg" alt="" loading="lazy"><div class="photo-label">Quartic.ai · team</div></div>
+          <!-- Set 2 — duplicate for seamless loop -->
+          <div class="photo-item"><img src="https://framerusercontent.com/images/rZXTioeMPK8pFHGJ3fXFaKEk.jpg" alt="" loading="lazy"><div class="photo-label">Shelfpay · Bengaluru, 2023</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/TPCWe9rofsz2zviU96SUztBw.jpg" alt="" loading="lazy"><div class="photo-label">YC S22 · Demo prep</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/oxKkKLpxzpl07ixkw7K0XCMlmhA.jpg" alt="" loading="lazy"><div class="photo-label">Working session</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/C2ArciMm11yO3q5ZjQE8PZkwpQ.jpg" alt="" loading="lazy"><div class="photo-label">Team · Shelfpay</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/en65fe0tjycusTgIr8dpJeW65LY.jpg" alt="" loading="lazy"><div class="photo-label">Quartic.ai · 2024</div></div>
+          <div class="photo-item"><img src="https://framerusercontent.com/images/4RFzdc1E2fCDQMrue3lb3SpDEk.jpg" alt="" loading="lazy"><div class="photo-label">Quartic.ai · team</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-cards">
+      <div class="card nc" onclick="go('work')"><div><div class="nc-lbl">Work</div><div class="nc-title">5 Case Studies</div><div class="nc-sub">Enterprise AI, fintech, healthcare. Shipped, in production.</div></div><div class="nc-ar">↗</div></div>
+      <div class="card nc" onclick="go('about')"><div><div class="nc-lbl">About</div><div class="nc-title">Who I Am Outside Work</div><div class="nc-sub">Dancer, artist, cat person. The rest of the picture.</div></div><div class="nc-ar">↗</div></div>
+      <div class="card nc nc-dk" onclick="go('connect')"><div><div class="nc-lbl">Connect</div><div class="nc-title" style="color:white;">Open to the Right Role</div><div class="nc-sub">Senior IC or founding. Where design shapes the product from the start.</div></div><div class="nc-ar">↗</div></div>
+    </div>
+
+  </section>
+
+  <!-- ─── WORK ─── -->
+  <section class="page" id="page-work">
+    <div class="wkx-head">
+      <div class="wkx-eyebrow">Work</div>
+      <h1 class="wkx-title">Selected work.</h1>
+    </div>
+
+    <div class="filter-row">
+      <button class="ftab on" data-f="all">All</button>
+      <button class="ftab" data-f="enterprise-ai">Enterprise AI</button>
+      <button class="ftab" data-f="fintech">Fintech</button>
+      <button class="ftab" data-f="health-tech">Health-tech</button>
+      <button class="ftab" data-f="mental-health">Mental Health</button>
+    </div>
+
+    <div class="wkx-list">
+      <div class="wkx-card" data-d="enterprise-ai" onclick="openCS('quartic')">
+        <div class="wkx-thumb"><img src="assets/thumb_quartic.webp" alt="Quartic.ai" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+        <div class="wkx-body">
+          <div class="wkx-top"><span class="wkx-dom"><span class="wkx-pip" style="background:#2563EB;"></span>Enterprise AI</span><span class="wkx-period">May 2024 – Present</span></div>
+          <div class="wkx-co">Quartic.ai</div>
+          <div class="wkx-rl">Product Designer II</div>
+          <div class="wkx-out"><strong>50K+ users</strong> across Fortune 500 manufacturers — AI analytics dashboards for plant operators who've never used an AI tool. Built Quartic's first design system, cutting handoff time by 40%.</div>
+          <div class="wkx-foot"><div class="wkx-tags"><span class="wkx-tag">Design Systems</span><span class="wkx-tag">ML Interface Design</span><span class="wkx-tag">Data Visualization</span><span class="wkx-tag">Predictive Maintenance</span></div><span class="wkx-lnk">View case study →</span></div>
+        </div>
+      </div>
+      <div class="wkx-card" data-d="fintech" onclick="openCS('shelfpay')">
+        <div class="wkx-thumb"><img src="assets/thumb_shelfpay.webp" alt="Shelfpay" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+        <div class="wkx-body">
+          <div class="wkx-top"><span class="wkx-dom"><span class="wkx-pip" style="background:#4F7E83;"></span>Fintech · YC S22</span><span class="wkx-period">Dec 2022 – Jun 2023</span></div>
+          <div class="wkx-co">Shelfpay</div>
+          <div class="wkx-rl">Founding Product Designer</div>
+          <div class="wkx-out">First and only designer — product, design system, and brand from scratch. <strong>80% day-1 retention</strong>, 0 to 5K users in six months, 60% lift in payment completion.</div>
+          <div class="wkx-foot"><div class="wkx-tags"><span class="wkx-tag">0→1 Product</span><span class="wkx-tag">Design System</span><span class="wkx-tag">Brand Identity</span><span class="wkx-tag">Group Payments</span></div><span class="wkx-lnk">View case study →</span></div>
+        </div>
+      </div>
+      <div class="wkx-card" data-d="health-tech" onclick="openCS('hilabs')">
+        <div class="wkx-thumb"><img src="assets/thumb_hilabs.webp" alt="HiLabs" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+        <div class="wkx-body">
+          <div class="wkx-top"><span class="wkx-dom"><span class="wkx-pip" style="background:#059669;"></span>Health-tech</span><span class="wkx-period">Jun 2023 – Apr 2024</span></div>
+          <div class="wkx-co">HiLabs</div>
+          <div class="wkx-rl">Product Designer I</div>
+          <div class="wkx-out"><strong>10K+ healthcare providers</strong> across the US. 30+ interviews with clinical staff, every decision grounded in real workflows. WCAG 2.1 AA throughout.</div>
+          <div class="wkx-foot"><div class="wkx-tags"><span class="wkx-tag">Healthcare UX</span><span class="wkx-tag">User Research</span><span class="wkx-tag">Accessibility</span><span class="wkx-tag">Dashboard Design</span></div><span class="wkx-lnk">View case study →</span></div>
+        </div>
+      </div>
+      <div class="wkx-card" data-d="health-tech" onclick="openCS('redrop')">
+        <div class="wkx-thumb"><img src="assets/thumb_redrop.webp" alt="Redrop" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+        <div class="wkx-body">
+          <div class="wkx-top"><span class="wkx-dom"><span class="wkx-pip" style="background:#D97706;"></span>Health-tech · Personal</span><span class="wkx-period">2023</span></div>
+          <div class="wkx-co">Redrop</div>
+          <div class="wkx-rl">Product Design</div>
+          <div class="wkx-out">A PCOS-management app that turns scattered information and infrequent visits into one place that educates, guides, and assists — <strong>3 user groups</strong> served, grounded in qual + quant research.</div>
+          <div class="wkx-foot"><div class="wkx-tags"><span class="wkx-tag">App Design</span><span class="wkx-tag">Info Architecture</span><span class="wkx-tag">Healthcare UX</span><span class="wkx-tag">Research</span></div><span class="wkx-lnk">View case study →</span></div>
+        </div>
+      </div>
+      <div class="wkx-card" data-d="mental-health" onclick="openCS('venton')">
+        <div class="wkx-thumb"><img src="assets/thumb_venton.webp" alt="Vent-On" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+        <div class="wkx-body">
+          <div class="wkx-top"><span class="wkx-dom"><span class="wkx-pip" style="background:#FFCD29;"></span>Mental Health · Personal</span><span class="wkx-period">2023</span></div>
+          <div class="wkx-co">Vent-On</div>
+          <div class="wkx-rl">Product Designer</div>
+          <div class="wkx-out">A Gen-Z mental-health companion for tracking emotions and habits — but with personality. <strong>Tone became the differentiator</strong>, with neobrutalism as the anti-clinical visual language.</div>
+          <div class="wkx-foot"><div class="wkx-tags"><span class="wkx-tag">App Design</span><span class="wkx-tag">Neobrutalism</span><span class="wkx-tag">Design System</span><span class="wkx-tag">Personal Project</span></div><span class="wkx-lnk">View case study →</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CASE STUDY PAGE ─── -->
+  <section class="page" id="page-casestudy">
+    <button class="cs-back" onclick="go(prevPage)">← Back</button>
+    <div class="card" style="overflow:hidden;margin-top:14px;border-radius:12px;">
+      <div id="csPageContent"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="page" id="page-about">
+
+    <div class="abx-pagehead">
+      <div class="abx-eyebrow"><span class="dot"></span>About</div>
+      <h1>The person behind the pixels.</h1>
+    </div>
+
+    <div class="abx">
+
+      <!-- HERO -->
+      <div class="abx-hero">
+        <div class="card abx-profile">
+          <div class="abx-avatar"><img src="assets/img5.jpeg" alt="Simran Verma"></div>
+          <div class="abx-name">Simran Verma</div>
+          <div class="abx-role">Product Designer II · Bengaluru</div>
+          <div class="abx-avail"><span class="d"></span>Available for new roles</div>
+          <div class="abx-soc">
+            <a href="https://linkedin.com/in/simranverma9" target="_blank">LinkedIn</a>
+            <a href="https://behance.net/simranvermaa" target="_blank">Behance</a>
+          </div>
+          <div class="abx-divider"></div>
+          <div class="abx-chip-label">✨ About me</div>
+          <div class="abx-chips">
+            <span class="abx-chip">Question Asker</span>
+            <span class="abx-chip">Chronic Overanalyzer</span>
+            <span class="abx-chip">Systems Thinker</span>
+            <span class="abx-chip">Two-Cat Household</span>
+          </div>
+          <div class="abx-chip-label">🌿 Non-work hours</div>
+          <div class="abx-chips">
+            <span class="abx-chip">Dancing</span>
+            <span class="abx-chip">Making Art</span>
+            <span class="abx-chip">Cat Duty</span>
+            <span class="abx-chip">Overthinking</span>
+          </div>
+        </div>
+
+        <div class="card abx-story">
+          <div class="abx-eyebrow">Who I am</div>
+          <h2>I make hard things feel obvious.</h2>
+          <p>Design found me before I had a name for it — I was always the one rearranging things to make more sense, explaining things nobody asked me to explain, asking <em>why</em> before <em>how</em>. Years later, that same instinct moved into Figma.</p>
+          <p>I've spent four years in the places where design is actually difficult: factory AI for operators who've never touched a dashboard, healthcare tools for teams drowning in bad software, payments for people who just want to split the bill without the awkwardness.</p>
+          <div class="abx-quote">"But are we solving the right problem?"</div>
+          <p>I ask that at least once a meeting; people have started to expect it. Outside work I'm dancing most evenings, making things with my hands, or watching my two cats judge a decision I spent six hours defending. <strong>I'm specific about most things. This portfolio is one of them.</strong></p>
+          <div class="abx-story-foot">
+            <div>
+              <div class="abx-seek-l">Currently looking for</div>
+              <div class="abx-seek-v">Senior IC or founding design roles where design shapes the product from day one.</div>
+            </div>
+            <a href="assets/Simran_Verma_Resume.pdf" target="_blank" class="abx-resume">Resume ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAT BAND -->
+      <div class="abx-stats">
+        <div class="card abx-stat"><div class="abx-stat-n">4+ yrs</div><div class="abx-stat-l">Designing in production since 2020.</div></div>
+        <div class="card abx-stat"><div class="abx-stat-n">12+</div><div class="abx-stat-l">Products shipped to real users, end to end.</div></div>
+        <div class="card abx-stat"><div class="abx-stat-n">4</div><div class="abx-stat-l">Domains — enterprise AI, fintech, health-tech, dev tools.</div></div>
+        <div class="card abx-stat dark"><div class="abx-stat-n">2</div><div class="abx-stat-l">Cats — full-time supervisors, zero respect for deadlines.</div></div>
+      </div>
+
+      <!-- CURRENTLY + PRINCIPLES -->
+      <div class="abx-two">
+        <div class="card abx-card">
+          <div class="clbl">Currently</div>
+          <div class="cur-list">
+            <div class="cur-item"><span class="cur-verb">Making</span><span class="cur-text">mini canvases — apparently a phase that isn't ending</span></div>
+            <div class="cur-item"><span class="cur-verb">Thinking about</span><span class="cur-text">why enterprise software assumes the user has infinite patience</span></div>
+            <div class="cur-item"><span class="cur-verb">Avoiding</span><span class="cur-text">reorganising my Figma files. Again.</span></div>
+          </div>
+        </div>
+        <div class="card abx-card">
+          <div class="clbl">Principles</div>
+          <div class="abx-pri-grid">
+            <div class="abx-pri"><div class="abx-pri-n">01</div><div class="abx-pri-t">Ask why before opening Figma</div><div class="abx-pri-d">The brief is rarely the actual problem.</div></div>
+            <div class="abx-pri"><div class="abx-pri-n">02</div><div class="abx-pri-t">Hard to use is never the user's fault</div><div class="abx-pri-d">If it's confusing, that's a design bug — not a user error.</div></div>
+            <div class="abx-pri"><div class="abx-pri-n">03</div><div class="abx-pri-t">If you can't explain it, it was a guess</div><div class="abx-pri-d">Every decision should survive being questioned out loud.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="card abx-gal">
+        <div class="abx-eyebrow" style="margin-bottom:18px;">Life outside the file</div>
+      <div class="abx-gal-group">
+        <div class="abx-gal-head"><span class="abx-gal-dot" style="background:#D97706;"></span><span class="abx-gal-title">🎨 Art</span><span class="abx-gal-count">6 pieces</span></div>
+        <div class="abx-gal-grid">
+          <div class="abx-gal-item"><img src="assets/art_delhi.jpeg" alt="Delhi, illustrated" loading="lazy"><div class="abx-gal-cap">Delhi, illustrated</div></div>
+          <div class="abx-gal-item"><img src="assets/art_koi.jpeg" alt="Balance (or the illusion of it)" loading="lazy"><div class="abx-gal-cap">Balance (or the illusion of it)</div></div>
+          <div class="abx-gal-item"><img src="assets/art_hands.jpeg" alt="After months :)" loading="lazy"><div class="abx-gal-cap">After months :)</div></div>
+          <div class="abx-gal-item"><img src="assets/art_IMG_6183.jpeg" alt="6pm somewhere" loading="lazy"><div class="abx-gal-cap">6pm somewhere</div></div>
+          <div class="abx-gal-item"><img src="assets/art_IMG_6237.jpeg" alt="Uninvited guest" loading="lazy"><div class="abx-gal-cap">Uninvited guest</div></div>
+          <div class="abx-gal-item"><img src="assets/art_IMG_6142.jpeg" alt="Optimist" loading="lazy"><div class="abx-gal-cap">Optimist</div></div>
+        </div>
+      </div>
+      <div class="abx-gal-group">
+        <div class="abx-gal-head"><span class="abx-gal-dot" style="background:#2563EB;"></span><span class="abx-gal-title">🌍 Travel</span><span class="abx-gal-count">6 pieces</span></div>
+        <div class="abx-gal-grid">
+          <div class="abx-gal-item"><img src="assets/img6.jpeg" alt="Goa at sunset" loading="lazy"><div class="abx-gal-cap">Goa at sunset</div></div>
+          <div class="abx-gal-item"><img src="assets/img7.jpeg" alt="On the road" loading="lazy"><div class="abx-gal-cap">On the road</div></div>
+          <div class="abx-gal-item"><img src="assets/img8.jpeg" alt="Somewhere beautiful" loading="lazy"><div class="abx-gal-cap">Somewhere beautiful</div></div>
+          <div class="abx-gal-item"><img src="assets/img9.jpeg" alt="In transit" loading="lazy"><div class="abx-gal-cap">In transit</div></div>
+          <div class="abx-gal-item"><img src="assets/img10.jpeg" alt="Golden hour" loading="lazy"><div class="abx-gal-cap">Golden hour</div></div>
+          <div class="abx-gal-item"><img src="assets/img11.jpeg" alt="A new discovery" loading="lazy"><div class="abx-gal-cap">A new discovery</div></div>
+        </div>
+      </div>
+      <div class="abx-gal-group">
+        <div class="abx-gal-head"><span class="abx-gal-dot" style="background:#DB2777;"></span><span class="abx-gal-title">🐱 The Cats</span><span class="abx-gal-count">6 pieces</span></div>
+        <div class="abx-gal-grid">
+          <div class="abx-gal-item"><img src="assets/img12.jpeg" alt="Just existing" loading="lazy"><div class="abx-gal-cap">Just existing</div></div>
+          <div class="abx-gal-item"><img src="assets/img13.jpeg" alt="Judging me" loading="lazy"><div class="abx-gal-cap">Judging me</div></div>
+          <div class="abx-gal-item"><img src="assets/img14.jpeg" alt="Fully unbothered" loading="lazy"><div class="abx-gal-cap">Fully unbothered</div></div>
+          <div class="abx-gal-item"><img src="assets/img15.jpeg" alt="Zero respect for my meetings" loading="lazy"><div class="abx-gal-cap">Zero respect for my meetings</div></div>
+          <div class="abx-gal-item"><img src="assets/img16.jpeg" alt="Nap number four" loading="lazy"><div class="abx-gal-cap">Nap number four</div></div>
+          <div class="abx-gal-item"><img src="assets/img17.jpeg" alt="The chaos duo" loading="lazy"><div class="abx-gal-cap">The chaos duo</div></div>
+        </div>
+      </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="abx-cta">
+        <div>
+          <div class="abx-cta-eyebrow"><span class="d"></span>Open to work</div>
+          <div class="abx-cta-h">Let's build something<br><em>worth using.</em></div>
+          <p class="abx-cta-sub">Product design — 0→1, design systems, and the genuinely hard problems. I ask why before I open Figma, and I stay until it ships right.</p>
+        </div>
+        <div class="abx-cta-r">
+          <a href="mailto:simranvermaa9@gmail.com" class="abx-cta-email">simranvermaa9@gmail.com</a>
+          <div class="abx-cta-meta">
+            <div class="row"><span class="k">Location</span><span class="v">Bengaluru, India</span></div>
+            <div class="row"><span class="k">Timezone</span><span class="v">IST · GMT+5:30</span></div>
+            <div class="row"><span class="k">Seeking</span><span class="v">Senior IC · Founding</span></div>
+          </div>
+          <div class="abx-cta-soc">
+            <a href="https://linkedin.com/in/simranverma9" target="_blank">LinkedIn</a>
+            <a href="https://behance.net/simranvermaa" target="_blank">Behance</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ─── CONNECT ─── -->
+  <section class="page" id="page-connect">
+    <div class="cnx">
+      <div class="cnx-head">
+        <div class="cnx-eye"><span class="dot"></span>Available for new roles</div>
+        <h1 class="cnx-title">Let's work together.</h1>
+        <p class="cnx-sub">I'm looking for founding, lead, or senior IC design roles — ideally on complex products where design has real stakes. If that sounds like your team, I'd love to hear from you.</p>
+      </div>
+
+      <!-- HERO -->
+      <div class="cnx-hero">
+        <div class="cnx-cta">
+          <div class="cnx-cta-eye"><span class="d"></span>Get in touch</div>
+          <div class="cnx-cta-h">Open to the<br><em>right role.</em></div>
+          <p class="cnx-cta-p">Email is the best way to reach me — I read everything and usually reply within a day or two.</p>
+          <a href="mailto:simranvermaa9@gmail.com" class="cnx-email">simranvermaa9@gmail.com →</a>
+          <div class="cnx-soc">
+            <a href="https://linkedin.com/in/simranverma9" target="_blank">LinkedIn</a>
+            <a href="https://behance.net/simranvermaa" target="_blank">Behance</a>
+            <a href="https://simranv.com" target="_blank">Portfolio</a>
+            <a href="assets/Simran_Verma_Resume.pdf" target="_blank">Resume ↗</a>
+          </div>
+          <div class="cnx-cta-foot">
+            <span>📍 Bengaluru, India</span>
+            <span>🕑 IST · GMT+5:30</span>
+            <span><span style="width:6px;height:6px;border-radius:50%;background:#22C55E;display:inline-block;"></span> Available now</span>
+          </div>
+        </div>
+
+        <div class="cnx-side">
+          <div class="card cnx-card">
+            <div class="clbl">What I'm looking for</div>
+            <div class="cnx-role"><div class="cnx-role-t">Founding Designer</div><div class="cnx-role-d">First design hire — product, system, and brand from zero. I've done it at a YC startup.</div></div>
+            <div class="cnx-role"><div class="cnx-role-t">Senior IC Product Designer</div><div class="cnx-role-d">Deep, hands-on craft on hard problems, without the management overhead.</div></div>
+            <div class="cnx-role"><div class="cnx-role-t">Lead / Senior Product Designer</div><div class="cnx-role-d">Owning a product area end-to-end and raising the design bar around me.</div></div>
+          </div>
+          <div class="card cnx-card">
+            <div class="clbl">Quick facts</div>
+            <div class="cnx-fact"><span class="k">Experience</span><span class="v">4+ years</span></div>
+            <div class="cnx-fact"><span class="k">Domains</span><span class="v">Enterprise AI · Fintech · Health-tech</span></div>
+            <div class="cnx-fact"><span class="k">Setup</span><span class="v">Remote · Hybrid</span></div>
+            <div class="cnx-fact"><span class="k">Notice</span><span class="v">Open to chat now</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAPABILITIES -->
+      <div class="cnx-sec">
+        <div class="cnx-sec-eye">How I can help</div>
+        <h2 class="cnx-sec-h">What I bring to a team.</h2>
+        <p class="cnx-sec-sub">Four years of shipping in production, across four domains.</p>
+      </div>
+      <div class="cnx-caps">
+        <div class="card cnx-cap"><div class="cnx-cap-n">01</div><div class="cnx-cap-t">0&rarr;1 Product</div><div class="cnx-cap-d">Take a fuzzy, ambiguous problem all the way to a shipped, working product.</div></div>
+        <div class="card cnx-cap"><div class="cnx-cap-n">02</div><div class="cnx-cap-t">Design Systems</div><div class="cnx-cap-d">Build the components, tokens, and docs that let a team move fast and stay consistent.</div></div>
+        <div class="card cnx-cap"><div class="cnx-cap-n">03</div><div class="cnx-cap-t">Complex Domains</div><div class="cnx-cap-d">Make technical, high-stakes software — AI, fintech, healthcare — feel obvious to use.</div></div>
+        <div class="card cnx-cap"><div class="cnx-cap-n">04</div><div class="cnx-cap-t">Research &amp; Testing</div><div class="cnx-cap-d">Ground every decision in real users and real workflows, not stakeholder guesses.</div></div>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="cnx-close">
+        <div class="cnx-close-q">"The best work starts with a good conversation."</div>
+        <div class="cnx-close-act">
+          <a href="mailto:simranvermaa9@gmail.com" class="cnx-close-btn">Start a conversation →</a>
+          <span class="cnx-close-or">or find me on <a href="https://linkedin.com/in/simranverma9" target="_blank">LinkedIn</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
