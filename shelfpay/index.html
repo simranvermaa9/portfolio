@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shelfpay case study — rebuilding how groups handle shared money in real time.">
+  <meta name="theme-color" content="#ffd731">
+  <title>Shelfpay — Simran Verma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ffd731' stroke='%23000' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial Black' font-size='25' fill='%23000'%3ESV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <div class="case-marquee" aria-hidden="true">
+    <div class="case-marquee-track">
+      <span>SHELFPAY · FINTECH · Y COMBINATOR S22 · FOUNDING PRODUCT DESIGNER ·</span>
+      <span>SHELFPAY · FINTECH · Y COMBINATOR S22 · FOUNDING PRODUCT DESIGNER ·</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand pill" href="../" aria-label="Simran Verma, home">SV</a>
+    <a class="pill back-link" href="../#work">← Back to work</a>
+    <a class="primary-pill" href="mailto:simranvermaa9@gmail.com">Say hello ↗</a>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="hero-meta">
+        <p class="eyebrow">FINTECH · Y COMBINATOR S22</p>
+        <p class="hero-role">Founding Product Designer · Dec 2022 – Jun 2023</p>
+      </div>
+      <h1 id="case-title">SHELF<span>PAY.</span></h1>
+      <div class="hero-copy">
+        <p>Rebuilding how groups handle shared money — in real time.</p>
+        <a class="outline-pill" href="#brief">Read the case study ↓</a>
+      </div>
+      <figure class="hero-product">
+        <img src="../assets/shelfpay.webp" alt="Shelfpay mobile product screens" fetchpriority="high">
+      </figure>
+      <div class="hero-sticker sticker-one">0 → 5K<br>USERS</div>
+      <div class="hero-sticker sticker-two">30+<br>PROTOTYPES</div>
+      <div class="hero-sticker sticker-three">YC<br>S22</div>
+      <div class="metric-strip" aria-label="Project outcomes">
+        <div><strong>80%</strong><span>Day-1 retention</span></div>
+        <div><strong>5K</strong><span>Users, 6 months</span></div>
+        <div><strong>60%</strong><span>Payment completion lift</span></div>
+        <div><strong>30+</strong><span>Prototypes tested</span></div>
+      </div>
+    </section>
+
+    <nav class="jump-nav" aria-label="Case study sections">
+      <span>JUMP TO</span>
+      <a href="#problem">Problem</a>
+      <a href="#research">Research</a>
+      <a href="#decisions">Decisions</a>
+      <a href="#product">Product</a>
+      <a href="#outcome">Outcome</a>
+    </nav>
+
+    <section class="case-section brief" id="brief" aria-labelledby="brief-title">
+      <div class="section-number">01</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE BRIEF</p>
+        <h2 id="brief-title">FIRST DESIGNER<br>IN THE DOOR.</h2>
+      </div>
+      <div class="brief-intro reveal">
+        <p class="lead">Shelfpay (YC S22) had a live product, a clear vision, and a founding team with strong technical conviction. What it didn’t have was a designer. I joined to change that.</p>
+        <p>The mandate from day one was simple and total: own the entire surface of the product, and the brand around it.</p>
+        <span class="context-pill">Y Combinator S22 · First & only designer</span>
+      </div>
+      <div class="ownership reveal">
+        <p class="eyebrow">EVERYTHING I OWNED</p>
+        <ul>
+          <li><span>01</span><strong>Product Design</strong><small>app, flows, UI</small></li>
+          <li><span>02</span><strong>Design System</strong><small>tokens, components</small></li>
+          <li><span>03</span><strong>Brand Identity</strong><small>logo, voice, visual</small></li>
+          <li><span>04</span><strong>Prototyping</strong><small>30+ tested builds</small></li>
+          <li><span>05</span><strong>User Research</strong><small>calls, field tests</small></li>
+          <li><span>06</span><strong>Onboarding</strong><small>first-run & growth</small></li>
+          <li><span>07</span><strong>Marketing & Outreach</strong><small>social, campaigns</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section problem" id="problem" aria-labelledby="problem-title">
+      <div class="section-number">02</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE PROBLEM</p>
+        <h2 id="problem-title">THE REAL PROBLEM WASN’T SPLITTING.<br><span>IT WAS SETTLING.</span></h2>
+      </div>
+      <p class="section-lead reveal">When people live together, travel, or share recurring costs, one person pays and the rest promise to settle. That promise quietly turns into a loop nobody enjoys — and existing apps were solving the math, not the awkwardness.</p>
+      <div class="loop-wrap reveal">
+        <p class="eyebrow">THE AWKWARD MONEY LOOP</p>
+        <ol class="money-loop">
+          <li><span>01</span><strong>Someone pays</strong><p>Picks up the whole bill</p></li>
+          <li><span>02</span><strong>“I’ll settle later”</strong><p>Everyone agrees, easily</p></li>
+          <li><span>03</span><strong>Days slip by</strong><p>Nobody actually moves</p></li>
+          <li><span>04</span><strong>Now it’s awkward</strong><p>Too weird to bring up</p></li>
+          <li><span>05</span><strong>So it’s dropped</strong><p>Debt + quiet resentment</p></li>
+        </ol>
+        <p class="loop-note">Next dinner, next trip — the same loop starts over.</p>
+      </div>
+      <p class="thesis reveal">The friction wasn’t awareness, and it wasn’t access to payments. It was <mark>social discomfort.</mark> Solve the awkwardness and the money follows.</p>
+    </section>
+
+    <section class="case-section research" id="research" aria-labelledby="research-title">
+      <div class="section-number">03</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">RESEARCH</p>
+        <h2 id="research-title">THE DATA MADE<br>IT UNDENIABLE.</h2>
+      </div>
+      <p class="section-lead reveal">Surveys and interviews with people who split costs regularly kept returning the same signal: the breakdown happens at repayment, not tracking.</p>
+      <div class="research-grid reveal">
+        <article><strong>67%</strong><p>hesitate to remind friends to pay them back, leaving debts unresolved</p></article>
+        <article><strong>₹5K+</strong><p>average unresolved balance for urban millennials sharing a home</p></article>
+        <article><strong>1 IN 3</strong><p>groups abandon expense apps within two months over repayment awkwardness</p></article>
+        <article><strong>85%</strong><p>said simpler repayment would rebuild trust and willingness to split again</p></article>
+      </div>
+      <blockquote class="research-quote reveal">
+        <p>“I’d rather lose the ₹400 than be the person who keeps asking for it.”</p>
+        <cite>— recurring sentiment across interviews</cite>
+      </blockquote>
+    </section>
+
+    <section class="case-section competition" aria-labelledby="competition-title">
+      <div class="section-number">04</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">COMPETITIVE ANALYSIS</p>
+        <h2 id="competition-title">WHAT THE MARKET DID —<br><span>AND WHERE IT STOPPED.</span></h2>
+      </div>
+      <p class="section-lead reveal">Most people already lived in Splitwise, Paytm Split, or WhatsApp Pay. The gap wasn’t features — it was structural. Every tool either logged money or moved it, but none held it as a group.</p>
+      <div class="market-gap reveal">
+        <p>Shelfpay was the missing <strong>group-wallet layer</strong> — groups pre-fund a shared balance and payments auto-settle in real time. No follow-ups. No reminders.</p>
+      </div>
+      <div class="comparison-wrap reveal">
+        <table>
+          <thead>
+            <tr><th>PRODUCT</th><th>GROUP WALLET</th><th>REAL-TIME</th><th>UPI</th><th>FLEX SPLIT</th><th>LOG ONLY</th></tr>
+          </thead>
+          <tbody>
+            <tr class="shelf-row"><th>SHELF ✦</th><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>×</td></tr>
+            <tr><th>SPLITWISE</th><td>×</td><td>×</td><td>×</td><td>✓</td><td>✓</td></tr>
+            <tr><th>PAYTM SPLIT</th><td>×</td><td>✓</td><td>✓</td><td>×</td><td>×</td></tr>
+            <tr><th>WHATSAPP PAY</th><td>×</td><td>✓</td><td>✓</td><td>×</td><td>×</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note reveal">Only Shelfpay combined a shared group balance with real-time, UPI-native, flexible settlement — the structural gap every competitor left open.</p>
+    </section>
+
+    <section class="case-section ecosystem" aria-labelledby="ecosystem-title">
+      <div class="section-number">05</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE ECOSYSTEM</p>
+        <h2 id="ecosystem-title">DESIGNING THE ECOSYSTEM,<br><span>NOT JUST THE INTERFACE.</span></h2>
+      </div>
+      <p class="section-lead reveal">Before opening Figma, I mapped the full product space. Shelfpay was six distinct workstreams, all owned by one designer.</p>
+      <div class="ecosystem-grid reveal">
+        <article><span>01</span><h3>Core Features</h3><p>Group Wallet<br>Pool Money<br>Split Payment</p></article>
+        <article><span>02</span><h3>Data & Analytics</h3><p>Mixpanel Integration<br>Behaviour Tracking<br>Drop-off Analysis</p></article>
+        <article><span>03</span><h3>User Research & Testing</h3><p>Field Testing<br>Bi-weekly User Calls<br>Persona Development</p></article>
+        <article><span>04</span><h3>Mobile App Design</h3><p>Modern<br>Easy to Use<br>Intuitive</p></article>
+        <article><span>05</span><h3>Design System</h3><p>Custom UI Components<br>Brand Colours<br>Design Tokens</p></article>
+        <article><span>06</span><h3>Branding & Marketing</h3><p>Social & Website<br>Physical Campaigns<br>User Outreach</p></article>
+      </div>
+    </section>
+
+    <section class="case-section themes" aria-labelledby="themes-title">
+      <div class="section-number">06</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT USERS TOLD US</p>
+        <h2 id="themes-title">FOUR THEMES.<br><span>EVERY SINGLE SESSION.</span></h2>
+      </div>
+      <p class="section-lead reveal">Through interviews and usability sessions, these patterns were consistent regardless of who we spoke to.</p>
+      <div class="themes-list reveal">
+        <article><span>01</span><div><h3>Asking for money back felt uncomfortable</h3><p>The discomfort of the reminder was worse than the money lost — users let it go, and resentment quietly built instead.</p></div></article>
+        <article><span>02</span><div><h3>“Expensing” apps rarely led to actual transfers</h3><p>Adding expenses was easy. The final step — actually paying — required someone to break the social tension. It rarely happened.</p></div></article>
+        <article><span>03</span><div><h3>Payment flows needed to feel social</h3><p>Users wanted payment to feel like part of the group conversation — private, flexible, immediate. Not a formal financial transaction.</p></div></article>
+        <article><span>04</span><div><h3>Tracking wasn’t enough — they wanted settlement</h3><p>Seeing who owes what didn’t reduce the friction of collecting it. Users wanted the money to move automatically. One step, not a process.</p></div></article>
+      </div>
+    </section>
+
+    <section class="case-section persona" aria-labelledby="persona-title">
+      <div class="section-number">07</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">USER PERSONA</p>
+        <h2 id="persona-title">WHO WE WERE REALLY<br>DESIGNING FOR.</h2>
+      </div>
+      <div class="persona-board reveal">
+        <div class="persona-id">
+          <div class="avatar" aria-hidden="true">RM</div>
+          <div><h3>Rohan Mehta</h3><p>24 · Bengaluru · Shares a 3BHK with 3 friends</p></div>
+          <dl>
+            <div><dt>ROLE</dt><dd>SDE at a startup</dd></div>
+            <div><dt>SPLITS WITH</dt><dd>Flatmates + trips</dd></div>
+            <div><dt>PAYS VIA</dt><dd>UPI, daily</dd></div>
+          </dl>
+          <blockquote>“I’d rather eat the ₹400 than text my friend to pay me back. Again.”</blockquote>
+        </div>
+        <div class="persona-details">
+          <article><h3>Goals</h3><ul><li>Settle up without the awkward reminder</li><li>Keep group money fair without doing the math</li><li>Pay in the same flow he already lives in</li></ul></article>
+          <article><h3>Frustrations</h3><ul><li>Chasing flatmates for small amounts</li><li>Expense apps that track but never settle</li><li>Quiet resentment when debts pile up</li></ul></article>
+          <article><h3>Behaviours</h3><ul><li>Pays for the group, settles later (or never)</li><li>Lives in UPI apps and group chats</li><li>Avoids confrontation over money</li></ul></article>
+          <article><h3>Needs</h3><ul><li>Money that moves automatically</li><li>Settling that feels social, not formal</li><li>Zero reminders, zero awkwardness</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section before" aria-labelledby="before-title">
+      <div class="section-number">08</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE PRODUCT BEFORE I STEPPED IN</p>
+        <h2 id="before-title">CORE FUNCTIONALITY EXISTED.<br><span>THE EXPERIENCE WAS FRAGMENTED.</span></h2>
+      </div>
+      <p class="section-lead reveal">Groups, splits, balance tracking — all there. But no hierarchy. Inconsistent patterns. Visual language that changed screen to screen. No design system.</p>
+      <div class="before-gallery reveal">
+        <figure><img src="../assets/shelfpay/before-1.png" alt="Shelfpay interface before the redesign: home screen" loading="lazy"></figure>
+        <figure><img src="../assets/shelfpay/before-2.png" alt="Shelfpay interface before the redesign: wallet history" loading="lazy"></figure>
+        <figure><img src="../assets/shelfpay/before-3.png" alt="Shelfpay interface before the redesign: payment detail" loading="lazy"></figure>
+        <figure><img src="../assets/shelfpay/before-4.png" alt="Shelfpay interface before the redesign: transactions" loading="lazy"></figure>
+      </div>
+      <blockquote class="before-quote reveal">“In usability sessions, I noticed hesitation before every primary action. That pause is expensive in fintech.”</blockquote>
+      <ul class="issue-list reveal">
+        <li>Flows required too much cognitive effort</li>
+        <li>Important actions weren’t visually prioritized</li>
+        <li>States weren’t clearly differentiated</li>
+        <li>No system-level coherence</li>
+        <li>Patterns relearned on every screen</li>
+        <li>Hesitation before every primary action</li>
+      </ul>
+    </section>
+
+    <section class="case-section decisions" id="decisions" aria-labelledby="decisions-title">
+      <div class="section-number">09</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT I CHANGED FIRST</p>
+        <h2 id="decisions-title">THREE DECISIONS THAT<br>SHAPED EVERYTHING.</h2>
+      </div>
+      <div class="decision-stack">
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>Designing screens independently</h3><p>Building each screen without a shared foundation and patching inconsistencies after.</p></div>
+          <div class="choice"><p class="eyebrow">I CHOSE</p><h3>Design system before any screen</h3><p>Color tokens, typography, spacing, interaction states — all defined first. Visual consistency is a trust signal in fintech. Every screen felt like the same product from day one.</p></div>
+        </article>
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>Covering every screen at once</h3><p>Sprinting to design all 100+ screens to hit scope coverage quickly.</p></div>
+          <div class="choice"><p class="eyebrow">I CHOSE</p><h3>Core flows first — validated by prototypes</h3><p>Group creation, wallet funding, expense split, real-time adjustment. 15+ prototypes. Prototype 11 became the product. Killing 10 first is how you know 11 is right.</p></div>
+        </article>
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>Just designing the app</h3><p>Scoping work to mobile UI and handing off files to engineering.</p></div>
+          <div class="choice"><p class="eyebrow">I CHOSE</p><h3>Owning the full product surface</h3><p>Brand, system, onboarding, marketing, product — one coherent thing. A product that looks like itself at every touchpoint builds trust faster than one that switches visual language between the ad and the app.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section product" id="product" aria-labelledby="product-title">
+      <div class="section-number">10</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE SHIPPED PRODUCT</p>
+        <h2 id="product-title">100+ SCREENS. 6 MONTHS.<br><span>ONE DESIGNER.</span></h2>
+      </div>
+      <div class="product-showcase reveal">
+        <figure class="phone phone-one"><img src="../assets/shelfpay/payment.png" alt="Shelfpay home and wallet screen" loading="lazy"></figure>
+        <figure class="phone phone-two"><img src="../assets/shelfpay/transactions.png" alt="Shelfpay payment confirmation screen" loading="lazy"></figure>
+        <figure class="phone phone-three"><img src="../assets/shelfpay/wallet.png" alt="Shelfpay group wallet screen" loading="lazy"></figure>
+        <figure class="phone phone-four"><img src="../assets/shelfpay/home.png" alt="Shelfpay refer and earn screen" loading="lazy"></figure>
+      </div>
+      <div class="product-features reveal">
+        <article><span>01</span><h3>Home & Wallet</h3><p>Opens on balance and group access — what a user needs the moment they open the app. Primary action always visible without scrolling.</p></article>
+        <article><span>02</span><h3>Split & Pay</h3><p>Split equally, by amount, or by share — all within the same screen as confirmation. No context switches.</p></article>
+        <article><span>03</span><h3>Transaction History</h3><p>Every transaction shows initiator, share, and settlement status. No ambiguity. No reason to chase anyone.</p></article>
+      </div>
+      <div class="otp-stage reveal">
+        <div><p class="eyebrow">ONE COHERENT PRODUCT</p><p>Brand, system, onboarding, marketing, product — one coherent thing.</p></div>
+        <figure><img src="../assets/shelfpay/otp.png" alt="Shelfpay OTP onboarding screen" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="case-section reflection" aria-labelledby="reflection-title">
+      <div class="section-number">11</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">REFLECTION</p>
+        <h2 id="reflection-title"><span class="reflection-line">WHAT I LEARNED</span><span class="reflection-line">DOING THIS.</span></h2>
+      </div>
+      <div class="reflection-grid reveal">
+        <article><span>01</span><h3>Map before you build</h3><p>Taking a week to map the full product space felt slow. It saved weeks. Every screen was faster to design because the system was already defined.</p></article>
+        <article><span>02</span><h3>In fintech, perception is the product</h3><p>Users don’t analyze whether the interface is well-designed. They feel whether it’s trustworthy. That feeling is built through every micro-decision, simultaneously.</p></article>
+        <article><span>03</span><h3>Kill prototypes fast</h3><p>Prototype 11 became the product. The other 10 weren’t waste — they were how we knew 11 was right. Test assumptions cheaply. Kill them faster than you build them.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section outcome" id="outcome" aria-labelledby="outcome-title">
+      <div class="section-number">12</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUTCOME</p>
+        <h2 id="outcome-title">0 TO 5,000 USERS.<br><span>SIX MONTHS.</span></h2>
+      </div>
+      <div class="outcome-grid reveal">
+        <article><strong>80%</strong><p>Day-1 retention at launch</p></article>
+        <article><strong>60%</strong><p>Lift in payment completion rate</p></article>
+        <article><strong>4.7/5</strong><p>User satisfaction score</p></article>
+        <article><strong>100+</strong><p>Screens designed across the full product</p></article>
+      </div>
+      <div class="case-next reveal">
+        <p>Back to the portfolio</p>
+        <a href="../#work">See selected work <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SIMRAN VERMA</p>
+    <a href="#case-study">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

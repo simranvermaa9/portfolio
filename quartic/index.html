@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quartic.ai MVDA case study — rebuilding multivariate data analysis for manufacturing engineers.">
+  <meta name="theme-color" content="#0d1420">
+  <title>Quartic.ai MVDA — Simran Verma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2355db9c' stroke='%23000' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial Black' font-size='25' fill='%23000'%3ESV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#case-study">Skip to case study</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <div class="case-marquee" aria-hidden="true">
+    <div class="case-marquee-track">
+      <span>QUARTIC.AI · ENTERPRISE AI · MANUFACTURING · MVDA ·</span>
+      <span>QUARTIC.AI · ENTERPRISE AI · MANUFACTURING · MVDA ·</span>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand pill" href="../" aria-label="Simran Verma, home">SV</a>
+    <a class="pill back-link" href="../#work">← Back to work</a>
+    <a class="primary-pill" href="mailto:simranvermaa9@gmail.com">Say hello ↗</a>
+  </header>
+
+  <main id="case-study">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="hero-meta">
+        <p class="eyebrow">ENTERPRISE AI · MANUFACTURING</p>
+        <p>Product Designer I → II · May 2024 – Present</p>
+      </div>
+      <h1 id="case-title">QUARTIC<span>.AI</span></h1>
+      <div class="hero-copy">
+        <p>Rebuilt a multivariate data analysis workbench for manufacturing engineers — from a rigid, table-heavy tool into a flexible, visualisation-first platform for 50K+ users across Fortune 500 plants.</p>
+        <a class="outline-pill" href="#product">Read the case study ↓</a>
+      </div>
+      <figure class="hero-product">
+        <img src="../assets/quartic.webp" alt="Quartic industrial AI analytics product" fetchpriority="high">
+      </figure>
+      <div class="hero-sticker sticker-one">50K+<br>USERS</div>
+      <div class="hero-sticker sticker-two">15+<br>MODULES</div>
+      <div class="metric-strip" aria-label="Project outcomes">
+        <div><strong>50K+</strong><span>Users across plants</span></div>
+        <div><strong>$2M+</strong><span>In deals influenced</span></div>
+        <div><strong>40%</strong><span>Faster design-to-dev</span></div>
+        <div><strong>15+</strong><span>Product modules</span></div>
+      </div>
+    </section>
+
+    <nav class="jump-nav" aria-label="Case study sections">
+      <span>JUMP TO</span>
+      <a href="#problem">Problem</a>
+      <a href="#users">Users</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#models">Models</a>
+      <a href="#decisions">Decisions</a>
+      <a href="#outcome">Outcome</a>
+    </nav>
+
+    <section class="case-section product-context" id="product" aria-labelledby="product-title">
+      <div class="section-number">01</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE PRODUCT</p>
+        <h2 id="product-title">MANUFACTURING PLANTS GENERATE ENORMOUS AMOUNTS OF SENSOR DATA.<br><span>MOST OF IT GOES UNUSED.</span></h2>
+      </div>
+      <div class="context-copy reveal">
+        <p>Quartic.ai is a decision-intelligence platform that puts that data to work. Sensors on equipment capture hundreds of features at every step of production — temperature, pressure, pH, wavelength readings. MVDA (Multivariate Data Analysis) is the module that lets engineers make sense of it.</p>
+        <p>The workflow: build statistical models from historical batch data, then run live batches against those models in real time. If a batch starts deviating from the trained norm, the model surfaces it — so engineers can intervene before a faulty batch reaches the end of the line.</p>
+      </div>
+      <div class="workflow-line reveal" aria-label="MVDA workflow">
+        <div><span>01</span><strong>Historical batch data</strong></div>
+        <div><span>02</span><strong>Statistical model</strong></div>
+        <div><span>03</span><strong>Live batch comparison</strong></div>
+        <div><span>04</span><strong>Deviation surfaced</strong></div>
+      </div>
+    </section>
+
+    <section class="case-section problem" id="problem" aria-labelledby="problem-title">
+      <div class="section-number">02</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT I WALKED INTO</p>
+        <h2 id="problem-title">THE PRODUCT EXISTED.<br><span>IT WAS GENUINELY BROKEN.</span></h2>
+      </div>
+      <p class="section-lead reveal">The existing MVDA was usable in the way a spreadsheet is usable — technically functional, but deeply misaligned with how manufacturing engineers actually think and work. Everything was in tables. The workflow was linear and unforgiving. Navigation required users to hold a mental model of decisions made three steps back.</p>
+      <div class="problem-grid reveal">
+        <article><span>01</span><h3>Tables everywhere</h3><p>Engineers were trying to spot patterns and outliers in data — tables are the worst tool for that.</p></article>
+        <article><span>02</span><h3>Rigid linear workflow</h3><p>Made one choice early on? Wrong. You’re starting over. The flow didn’t let users move backwards or skip steps.</p></article>
+        <article><span>03</span><h3>No scalability</h3><p>Large projects with many models and datasets became unmanageable. The project management layer barely existed.</p></article>
+        <article><span>04</span><h3>Design inconsistency</h3><p>MVDA didn’t follow Quartic’s design language. Every module felt like a different product.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section users" id="users" aria-labelledby="users-title">
+      <div class="section-number">03</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE USERS</p>
+        <h2 id="users-title">TWO VERY DIFFERENT PEOPLE<br><span>USING THE SAME TOOL.</span></h2>
+      </div>
+      <p class="section-lead reveal">Research surfaced two personas with near-opposite needs. Designing for both without alienating either was the central tension of the whole project — one builds the models, the other lives with their output.</p>
+      <div class="persona-grid reveal">
+        <article class="persona analyst">
+          <div class="persona-top"><span>MODEL BUILDER</span><h3>Data Analyst</h3><p>Needs control, precision and depth.</p></div>
+          <blockquote>“Give me every knob. I know exactly what I’m tuning and why.”</blockquote>
+          <div class="persona-details">
+            <div><h4>Goals</h4><ul><li>Configure exactly which batches, features and data types feed each dataset</li><li>Run transformations, handle outliers, tune model parameters</li></ul></div>
+            <div><h4>Behaviour</h4><ul><li>Prefers interactive visualisation over raw tables</li><li>Uses the product daily and deeply — power-user expectations</li></ul></div>
+          </div>
+        </article>
+        <article class="persona engineer">
+          <div class="persona-top"><span>MONITOR</span><h3>Process Engineer</h3><p>Needs signal, not noise.</p></div>
+          <blockquote>“Just tell me if something’s wrong with the line right now.”</blockquote>
+          <div class="persona-details">
+            <div><h4>Goals</h4><ul><li>Know instantly if a live batch is deviating</li><li>See high-level summaries and anomaly alerts at a glance</li></ul></div>
+            <div><h4>Behaviour</h4><ul><li>Doesn’t want to configure anything — just see current state</li><li>Visual storytelling over statistics</li></ul></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section scope" aria-labelledby="scope-title">
+      <div class="section-number">04</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">MY SCOPE</p>
+        <h2 id="scope-title">WHAT I OWNED<br><span>END TO END.</span></h2>
+      </div>
+      <p class="section-lead reveal">Four areas, one accountable designer — from the research artefacts through to the components engineers built against.</p>
+      <div class="scope-grid reveal">
+        <article><span>01</span><h3>Design Documentation</h3><p>Full UX spec — personas, journeys, functional requirements, flow additions, content and error states for every screen.</p></article>
+        <article><span>02</span><h3>Design System</h3><p>Adapted an open-source component library to Quartic’s branding and domain. Cut design-to-dev handoff time by <strong>40%</strong> across 15+ modules.</p></article>
+        <article><span>03</span><h3>Hi-fi Frames</h3><p>End-to-end hi-fidelity designs for the full MVDA redesign — dataset wizard, model analysis dashboards, live monitoring views.</p></article>
+        <article><span>04</span><h3>Engineering Collaboration</h3><p>Partnered directly with ML engineers to translate PCA/PLS outputs into interfaces engineers could interpret without a statistics degree.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section dataset" id="dataset" aria-labelledby="dataset-title">
+      <div class="section-number">05</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE WORK — DATASET CREATION</p>
+        <h2 id="dataset-title">GETTING THE RIGHT DATA IN<br><span>WAS HALF THE PROBLEM.</span></h2>
+      </div>
+      <p class="section-lead reveal">Before a model can be built, engineers create a dataset — selecting which product, recipes, batches, and feature types to include. The old flow was a confusing single form. The redesign is a 6-step wizard handling three data types (time series, discrete, spectral) with free navigation between completed steps and contextual validation at every stage.</p>
+      <div class="wizard-board reveal">
+        <ol class="wizard-steps">
+          <li><span>01</span><strong>Product & Recipe</strong></li>
+          <li><span>02</span><strong>Batches</strong></li>
+          <li><span>03</span><strong>Time Series</strong></li>
+          <li><span>04</span><strong>Discrete</strong></li>
+          <li><span>05</span><strong>Spectral</strong></li>
+          <li><span>06</span><strong>Review & Confirm</strong></li>
+        </ol>
+        <div class="wizard-notes">
+          <article><h3>Product & Recipe → Batches</h3><p>Configure which product and recipe to pull from, then select up to 100 batches. Handles multi-recipe combinations with inline validation for conflicting assets or missing aliases.</p></article>
+          <article><h3>Features — 3 types</h3><p>Time series (sensor readings over time), discrete (single-point values), and spectral (wavelength data) each have their own step with smart empty states and minimum-selection guards.</p></article>
+          <article><h3>Review & Confirm</h3><p>Summarises all selections before data import. Warns at the review step if no datasets will be created — before any processing is triggered.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section models" id="models" aria-labelledby="models-title">
+      <div class="section-number">06</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE WORK — ANALYSIS & MONITORING</p>
+        <h2 id="models-title">TWO MODEL TYPES.<br><span>TWO VERY DIFFERENT JOBS.</span></h2>
+      </div>
+      <p class="section-lead reveal">Same platform, two fundamentally different mental models. Naming “PCA” and “PLS” as <strong>Analysis</strong> and <strong>Production</strong> models was itself a design decision — making purpose clear without requiring a statistics background.</p>
+      <div class="model-compare reveal">
+        <article><span>ANALYSIS MODEL</span><h3>Looking backward</h3><p>Comparing historical batches</p></article>
+        <article><span>PRODUCTION MODEL</span><h3>Looking forward</h3><p>Flagging live deviations</p></article>
+      </div>
+
+      <article class="model-story analysis-story reveal">
+        <div class="story-index">01</div>
+        <div class="story-copy">
+          <p class="eyebrow">ANALYSIS MODEL · GROUP COMPARISON</p>
+          <h3>Retrospective batch analysis</h3>
+          <p>A table-heavy report became a two-panel workbench. Left: a multi-feature projection scatter (PC1 vs PC2) where engineers group batches visually — good against bad — to understand what separates them, then select which batches form the training set. Right: feature contribution and single-feature trend panels explain what’s driving any difference.</p>
+        </div>
+        <div class="analysis-features">
+          <article><strong>Multi-feature Projection</strong><p>Interactive scatter. Select batches, assign to groups, watch clustering emerge.</p></article>
+          <article><strong>Feature Contribution</strong><p>Bars ranked by variance explained. Click one to see its trend below.</p></article>
+          <article><strong>Single Feature Trend</strong><p>Group A vs B mean and ±3σ confidence bands over time.</p></article>
+        </div>
+      </article>
+
+      <article class="model-story production-story reveal">
+        <div class="story-index">02</div>
+        <div class="story-copy">
+          <p class="eyebrow">PRODUCTION MODEL · LIVE MONITORING</p>
+          <h3>Real-time batch ingestion</h3>
+          <p>Production models ingest live batches in real time. The monitoring view shows every batch’s score trajectory as it runs — letting engineers catch a deviation forming before the batch ends. Loading-comparison heatmaps and Hotelling T² charts give the deeper diagnostic views for when something goes wrong.</p>
+        </div>
+        <figure class="monitoring-visual">
+          <img src="../assets/quartic/production-monitoring.jpeg" alt="Production model monitoring screens" loading="lazy">
+        </figure>
+        <div class="monitoring-features">
+          <article><strong>Model List</strong><p>All models with status — Active, Paused, Monitoring Paused — at a glance.</p></article>
+          <article><strong>Scores Line Plot</strong><p>Every live batch overlaid. Divergence from norm is immediately visible.</p></article>
+          <article><strong>Loading Comparison</strong><p>Heatmap of which variables load most on each principal component.</p></article>
+          <article><strong>Hotelling T²</strong><p>Statistical control chart per batch. Crosses the limit → needs attention.</p></article>
+        </div>
+      </article>
+    </section>
+
+    <section class="case-section decisions" id="decisions" aria-labelledby="decisions-title">
+      <div class="section-number">07</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">DESIGN DECISIONS</p>
+        <h2 id="decisions-title">THE TRADEOFFS<br><span>THAT MATTERED.</span></h2>
+      </div>
+      <div class="decision-stack">
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>Tables of batch data</h3><p>Rows and columns of numbers for engineers trying to understand batch behaviour across hundreds of variables.</p></div>
+          <div class="choice"><p class="eyebrow">WE USED</p><h3>Interactive scatter plots + band charts</h3><p>Patterns and outliers that were invisible in tables become immediately obvious when 100 batches are plotted as points in a 2D projection. Clicking a point drills into that batch’s feature behaviour.</p></div>
+        </article>
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>A linear, unforgiving wizard</h3><p>Start over if you realised you picked the wrong recipe in step 1 after completing step 5.</p></div>
+          <div class="choice"><p class="eyebrow">WE USED</p><h3>Free navigation between completed steps</h3><p>Any completed step is tappable from the sidebar. Go back, change a selection, and the downstream steps update their validation state accordingly — without resetting everything else.</p></div>
+        </article>
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>Errors revealed at submission</h3><p>The old flow would fail at the end when required configurations were missing, with no indication of where or why.</p></div>
+          <div class="choice"><p class="eyebrow">WE USED</p><h3>Contextual validation at every step</h3><p>Alias missing? Shown inline at the feature it affects. Recipes have no common batches? Told in step 1, not at the review screen. Engineers always know exactly what needs fixing and where.</p></div>
+        </article>
+        <article class="decision reveal">
+          <div class="instead"><p class="eyebrow">INSTEAD OF</p><h3>AI outputs as black boxes</h3><p>A model says “batch 43 is anomalous.” Why? Unknown.</p></div>
+          <div class="choice"><p class="eyebrow">WE USED</p><h3>Explainability built into the analysis</h3><p>Feature contribution charts show which variables drove the anomaly. Loading comparisons explain the model’s own structure. Engineers don’t need a statistics degree — they need enough context to act.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section reflection" aria-labelledby="reflection-title">
+      <div class="section-number">08</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">REFLECTION</p>
+        <h2 id="reflection-title"><span class="reflection-line">WHAT THIS</span><span class="reflection-line">BUILT IN ME.</span></h2>
+      </div>
+      <div class="reflection-grid reveal">
+        <article><span>01</span><h3>Domain fluency is a design skill</h3><p>I could not design MVDA without understanding what PCA actually does, why latent variables matter, and what a process engineer sees when they look at a Hotelling T² chart. The investment in domain knowledge paid back in every single design decision.</p></article>
+        <article><span>02</span><h3>A component library is a product too</h3><p>Adapting an open-source library for Quartic’s needs meant making thousands of small decisions about tokens, states, and behaviour. Getting that right — and documented — is what made the 40% handoff reduction possible.</p></article>
+        <article><span>03</span><h3>Visualisation is the UX, not decoration</h3><p>The entire value of MVDA depends on engineers being able to read a scatter plot and understand what it’s telling them about their production line. The chart design wasn’t a visual layer on top of the product — it was the product.</p></article>
+        <article><span>04</span><h3>Documentation creates alignment</h3><p>The UX spec I wrote before designing anything became the single source of truth for the team — engineering, product, and stakeholders. Decisions stopped being revisited because they were written down.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section outcome" id="outcome" aria-labelledby="outcome-title">
+      <div class="section-number">09</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">OUTCOME</p>
+        <h2 id="outcome-title">WHAT<br><span>SHIPPED.</span></h2>
+      </div>
+      <div class="outcome-grid reveal">
+        <article><strong>50K+</strong><p>Users across Fortune 500 manufacturing plants</p></article>
+        <article><strong>$2M+</strong><p>In closed deals this work contributed to</p></article>
+        <article><strong>40%</strong><p>Reduction in design-to-dev handoff time</p></article>
+        <article><strong>PD II</strong><p>Promoted April 2025 — one of two designers retained post-acquisition</p></article>
+      </div>
+      <div class="case-next reveal">
+        <p>Back to the portfolio</p>
+        <a href="../#work">See selected work <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SIMRAN VERMA</p>
+    <a href="#case-study">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
