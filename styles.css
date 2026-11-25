@@ -306,7 +306,7 @@ footer {
   text-transform: uppercase;
 }
 
-.hero-sticker:first-of-type {
+.hero-sticker.sticker-yellow {
   top: 17%;
   left: 5%;
   width: 104px;
@@ -315,9 +315,11 @@ footer {
   transform: rotate(-9deg);
 }
 
-.hero-sticker:nth-of-type(2) {
-  right: 5%;
-  bottom: 18%;
+/* Lives inside .hero-bottom so it always sits just above the CTA instead of
+   being positioned by hero height (which made it collide with the button). */
+.hero-sticker.sticker-violet {
+  right: 0.5rem;
+  bottom: calc(100% + 0.5rem);
   width: 118px;
   min-height: 86px;
   padding: 1rem;
@@ -1069,17 +1071,17 @@ footer {
     min-height: calc(100svh - 100px);
   }
 
-  .hero-sticker:first-of-type {
-    top: 15%;
+  .hero-sticker.sticker-yellow {
+    top: 7%;
     left: 3%;
     width: 90px;
     height: 90px;
     font-size: 0.62rem;
   }
 
-  .hero-sticker:nth-of-type(2) {
-    right: 3%;
-    bottom: 25%;
+  .hero-sticker.sticker-violet {
+    right: 0.5rem;
+    bottom: 0;
     width: 105px;
     min-height: 78px;
     font-size: 0.62rem;
@@ -1257,12 +1259,22 @@ footer {
     text-align: center;
   }
 
-  .hero-sticker:nth-of-type(2) {
+  .hero-sticker.sticker-yellow {
+    top: 4%;
+  }
+
+  .hero-sticker.sticker-violet {
     display: none;
   }
 
   .project header {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero-sticker.sticker-yellow {
+    display: none;
   }
 }
 
